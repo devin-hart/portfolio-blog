@@ -148,3 +148,20 @@ table {
 .title {
   text-wrap: balance;
 }
+
+/* Custom */
+
+nav a {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 0.25rem;
+  &::before {
+    content: '⬜';
+  }
+
+  &:hover {
+    &::before {
+      content: '⬛';
+    }
+  }
+}
