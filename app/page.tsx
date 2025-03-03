@@ -2,7 +2,7 @@ import { BlogPosts } from 'app/components/posts'
 
 export default function Page() {
   return (
-    <section>
+    <section className="hs-screeen">
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         Devin Hart | Web Dev
       </h1>
@@ -15,9 +15,6 @@ export default function Page() {
 
         <p className="mb-4">{`I build. I refine. I deploy. There is always more to do. Always another problem to solve. I step forward into the unknown. And I build again.`}
       </p>
-      <div className="my-8">
-        <BlogPosts />
-      </div>
     </section>
   )
 }

@@ -47,13 +47,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-[#DDDDDD] bg-[#222222]',
+        "bg-cover bg-fixed bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dlk1wqemy/image/upload/v1741022028/bg-2_lpliqk.webp')]",
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="antialiased max-w-xl mx-4 lg:mx-auto">
+        <main className="flex-auto min-w-0 pt-6 flex flex-col px-2  text-[#DDDDDD] bg-[rgba(37,36,41,0.95)] pl-8 pr-8">
           <Navbar />
           {children}
           <Footer />

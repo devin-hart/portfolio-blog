@@ -151,7 +151,15 @@ table {
 
 /* Custom */
 
-nav a {
+main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* link blocks */
+nav a,
+footer a {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-gap: 0.25rem;
