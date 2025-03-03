@@ -155,21 +155,24 @@ main {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  box-shadow: 1ch .5em 0 0 rgba(0, 0, 0, 0.5);
 }
 
 /* link blocks */
-nav a,
-footer a {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 0.25rem;
-  &::before {
-    content: '⬜';
-  }
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
 
+a {
   &:hover {
-    &::before {
-      content: '⬛';
-    }
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-neutral-400, #a3a3a3);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 2px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
   }
 }
+

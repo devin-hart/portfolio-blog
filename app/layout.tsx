@@ -47,7 +47,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        "bg-cover bg-fixed bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dlk1wqemy/image/upload/v1741022028/bg-2_lpliqk.webp')]",
+        "bg-cover bg-fixed bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dlk1wqemy/image/upload/v1741022028/bg-2_lpliqk.webp')] mt-4 mb-4",
         GeistSans.variable,
         GeistMono.variable
       )}
