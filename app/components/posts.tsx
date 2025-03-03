@@ -3,17 +3,22 @@ import { formatDate, getBlogPosts } from 'app/blog/utils'
 
 export function BlogPosts() {
   let allBlogs = getBlogPosts()
+  
 
   return (
     <div>
       {allBlogs
         .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1
+          const titleA = a.metadata.publishedAt.toLowerCase(); // Extract the title and convert to lowercase for case-insensitive comparison
+          const titleB = b.metadata.publishedAt.toLowerCase();
+          
+          if (titleA < titleB) {
+            return -1;
           }
-          return 1
+          if (titleA > titleB) {
+            return 1;
+          }
+          return 0; // titles must be equal
         })
         .map((post) => (
           <Link

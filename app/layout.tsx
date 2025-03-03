@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description: 'Devin Hart Web Development Portfolio.',
   openGraph: {
-    title: 'My Portfolio',
+    title: 'Devin Hart | Web Dev Portfolio',
     description: 'Devin Hart Web Development Portfolio.',
     url: baseUrl,
     siteName: 'Devin Hart | Web Dev',
