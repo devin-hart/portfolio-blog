@@ -7,9 +7,13 @@ const navItems = {
   '/blog': {
     name: 'work/projects',
   },
+  '/other': {
+    name: 'other',
+  },
 }
 
-export function Navbar() {
+
+export function Navbar() {  
   return (
     <aside className=" mb-8 tracking-tight">
       <div className="lg:sticky lg:top-20">

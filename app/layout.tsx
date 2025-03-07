@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import Favicon from './favicon.ico';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -22,6 +23,14 @@ export const metadata: Metadata = {
     siteName: 'Devin Hart | Web Dev',
     locale: 'en_US',
     type: 'website',
+  },
+  icons: {
+    icon: [
+        {
+            url: Favicon.src,
+            href: Favicon.src,
+        },
+    ],
   },
   robots: {
     index: true,
