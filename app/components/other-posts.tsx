@@ -27,10 +27,10 @@ export function BlogPosts() {
             href={`/other/${post.slug}`}
           >
             <div className="w-full grid md:grid-cols-[125px_1fr] md:gap-x-4 md:gap-y-4">
-              <p className="text-neutral-600 dark:text-neutral-400 w-[150px] tabular-nums">
+              <p className="w-[150px] tabular-nums">
                 {post.metadata.publishedAt}
               </p>
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+              <p className="tracking-tight">
                 {post.metadata.title}
               </p>
             </div>
