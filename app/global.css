@@ -175,3 +175,7 @@ footer li a:hover svg {
   transition-duration: 250ms;
   transform: rotate(45deg);
 }
+
+p {
+  margin-bottom: 1rem;
+}
