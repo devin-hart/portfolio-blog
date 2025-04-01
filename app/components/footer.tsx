@@ -1,4 +1,36 @@
+"use client";
+import { useEffect } from "react";
+
 export default function Footer() {
+    useEffect(() => {
+        console.log(`
+            ████████████            
+        ████      ░░░░▒▒████        
+      ██      ░░░░░░░░░░▒▒▒▒██      
+    ██    ░░░░░░░░░░░░░░░░▒▒▒▒██    
+  ██  ░░░░░░░░░░░░░░    ░░░░░░▒▒██  
+  ██░░░░██████░░░░  ░░██████░░▒▒██  
+██  ░░████████░░░░░░░░████████░░▒▒██
+██  ██████████░░░░░░░░██████████▒▒██
+██  ██████████░░░░░░░░██████████▒▒██
+██  ░░██████░░░░░░░░░░░░██████░░▒▒██
+██░░░░░░░░░░░░████████░░░░░░░░░░▒▒██
+  ██░░░░░░░░░░░░████░░░░░░░░░░▒▒██  
+  ██░░░░░░░░░░░░████░░░░░░░░░░▒▒██  
+    ██  ░░░░░░░░░░░░░░░░░░░░▒▒██    
+      ██  ░░░░░░░░░░░░░░░░▒▒██      
+        ██░░░░██░░░░██░░░░██        
+        ██░░░░██░░░░██░░░░██        
+        ██░░▒▒██░░▒▒██░░▒▒██        
+          ████  ████  ████ 
+
+thanks for your checking out my portfolio
+the site was made using react and typescript
+it was deployed on vercel
+consider hiring me
+<3 devin hart
+      `);
+      }, []);
   return (
     <footer className="pb-8 mt-16">
       <ul className="font-sm mt-8 flex flex-row space-x-4 space-y-0">
