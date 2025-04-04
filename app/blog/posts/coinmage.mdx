@@ -1,0 +1,38 @@
+---
+title: 'CoinMage'
+publishedAt: 'Project'
+summary: 'A minimal, fast CLI tool for checking real-time cryptocurrency data using the CoinGecko API.'
+---
+
+[Github Repo](https://github.com/devin-hart/coinmage)
+
+<a href="https://res.cloudinary.com/dlk1wqemy/image/upload/v1743774776/coinmage_1_zjiwqu.webp">
+![CoinMage CLI](https://res.cloudinary.com/dlk1wqemy/image/upload/v1743774776/coinmage_1_zjiwqu.webp)
+</a>
+
+## Why this project?
+
+When you switch over to Linux, you get comfortable with the terminal real fast. Some things are just faster, cleaner, and more direct in the shell — and let’s be honest, there's something kind of badass about flying through commands like you’re Crash Override in *Hackers*. Welcome to the world of CLIs.
+
+If you’ve read my [Who Am I?](/other/about-me) post, you know I’m into building cryptocurrency miners. I don’t just build rigs — I also invest in crypto. And if you’ve spent any time in the space, you already know how wild the market can be. It’s volatile. It moves fast. It crashes while you’re sleeping and spikes while you’re distracted. So yeah, I check prices often.
+
+I use [CoinStats](https://coinstats.app/) to track my portfolio and hit up [CoinGecko](https://www.coingecko.com/) when I want to dig into a specific coin. But sometimes, I just want the info fast — no navigating, no clicking through five pages to get to the number I already know I want. That’s how CoinMage came to life: a CLI that gives me what I need, right from the terminal, with zero fluff.
+
+## About the Project
+
+CoinMage is a crypto price-checking CLI that pulls live data from the CoinGecko API. It supports both interactive input and direct command-line flags for fast lookups. You can search for a coin by name or symbol, and the tool handles resolution and caching internally to minimize API calls. It also supports shorthand flags like `-c eth` to fetch Ethereum instantly, and `-x` to exit after the lookup — great for scripting or quick checks from your terminal.
+
+Available commands include:
+- `/top` – Show the top 10 coins by market cap
+- `/trending` – View currently trending coins on CoinGecko
+- `/help` – Display available commands
+- `/exit` – Exit the CLI  
+  You can also enter any valid coin symbol or name (`btc`, `ethereum`, etc.) to view detailed market data.
+<br />
+The tool is built with a few lightweight Node.js modules:
+- **`inquirer`** – Handles the interactive CLI prompt
+- **`ora`** – Adds spinners while data is loading
+- **`chalk`** – Formats output with readable colors
+- **`node-fetch`** – Makes API calls to CoinGecko
+<br />
+This was my first time configuring a CLI to be installed globally using `npm link`, and I wanted to create something that wasn’t just a learning exercise but a tool others might actually use. It’s fully written in native ES6+ and structured to be easy to maintain, extend, or fork.
