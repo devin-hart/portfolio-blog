@@ -20,19 +20,22 @@ I use [CoinStats](https://coinstats.app/) to track my portfolio and hit up [Coin
 
 ## About the Project
 
-CoinMage is a crypto price-checking CLI that pulls live data from the CoinGecko API. It supports both interactive input and direct command-line flags for fast lookups. You can search for a coin by name or symbol, and the tool handles resolution and caching internally to minimize API calls. It also supports shorthand flags like `-c eth` to fetch Ethereum instantly, and `-x` to exit after the lookup — great for scripting or quick checks from your terminal.
+CoinMage is a command-line application that allows you to track cryptocurrencies, view market data, and watch live coin prices with real-time updates. The application fetches its data from CoinGecko, one of the most comprehensive cryptocurrency APIs available.
 
-Available commands include:
-- `/top` – Show the top 10 coins by market cap
-- `/trending` – View currently trending coins on CoinGecko
-- `/help` – Display available commands
-- `/exit` – Exit the CLI  
-  You can also enter any valid coin symbol or name (`btc`, `ethereum`, etc.) to view detailed market data.
+### Features:
+- **Search for Coins**: Users can search for a coin by its name, symbol, or a shorthand alias (e.g., "BTC" for Bitcoin).
+- **Market Data**: For each coin, users can view detailed data including:
+  - Current price
+  - Market cap rank
+  - 24-hour price change
+  - Volume and circulating supply
+- **Watchlist**: Users can create and manage multiple watchlists. The app will track live prices for all the coins in a user-defined watchlist.
+- **Live Coin Watch**: This feature allows users to track selected coins in real-time, displaying their price and percentage changes.
+- **Trending Coins**: The app can display trending coins on CoinGecko, giving users insight into which coins are getting attention.
+- **Top Coins**: The top 10 coins by market capitalization can be shown for quick access.
+
+### Key Updates:
+- **Improved Coin Ranking**: When searching for coins, the app now selects the coin with the **highest market cap rank** if multiple coins share the same name or symbol.
+- **Sparkline Charts**: Users can view a 7-day sparkline chart showing the price trend of a coin, providing a quick visual representation of price fluctuations.
 <br />
-The tool is built with a few lightweight Node.js modules:
-- **`inquirer`** – Handles the interactive CLI prompt
-- **`ora`** – Adds spinners while data is loading
-- **`chalk`** – Formats output with readable colors
-- **`node-fetch`** – Makes API calls to CoinGecko
-<br />
-This was my first time configuring a CLI to be installed globally using `npm link`, and I wanted to create something that wasn’t just a learning exercise but a tool others might actually use. It’s fully written in native ES6+ and structured to be easy to maintain, extend, or fork.
+CoinMage is continuously evolving with new features and improvements aimed at making cryptocurrency tracking more accessible and enjoyable for all users.
