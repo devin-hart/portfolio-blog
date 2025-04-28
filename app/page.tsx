@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <section className="hs-screeen">
+    <section className="hs-screeen fade-in">
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         Devin Hart | Web Dev
       </h1>

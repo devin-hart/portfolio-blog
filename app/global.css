@@ -179,3 +179,17 @@ footer li a:hover svg {
 p {
   margin-bottom: 1rem;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px); /* subtle upward motion */
+    animation: fadeIn 0.33s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

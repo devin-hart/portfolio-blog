@@ -59,7 +59,7 @@ export default function Blog({ params }) {
   }
 
   return (
-    <section className="hs-screeen"> 
+    <section className="hs-screeen fade-in"> 
       <script
         type="application/ld+json"
         suppressHydrationWarning
