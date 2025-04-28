@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getBlogPosts } from 'app/blog/utils'
+import { getBlogPosts } from 'app/work/utils'
 
 export function BlogPosts() {
   const allBlogs = getBlogPosts()
@@ -34,7 +34,7 @@ export function BlogPosts() {
                 <Link
                 key={post.slug}
                 className="flex flex-col py-0"
-                href={`/blog/${post.slug}`}
+                href={`/work/${post.slug}`}
                 >
                 <div className="w-full grid md:grid-cols-[125px_1fr] md:gap-x-4">
                     <p className="w-[150px] tabular-nums text-gray-400 !mb-0">
