@@ -28,7 +28,7 @@ export function BlogPosts() {
       {sectionOrder.map((section) => (
         grouped[section] && (
           <div key={section} className="mb-8">
-            <h2 className="text-xl font-bold mb-4">{section}</h2>
+            <h2 className="text-xl font-bold mb-4" id={section.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}>{section}</h2>
             <div className="space-y-3">
               {grouped[section].map((post) => (
                 <Link
