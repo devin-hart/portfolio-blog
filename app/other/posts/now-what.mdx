@@ -1,0 +1,111 @@
+---
+title: 'Now what?: A love letter to junior devs'
+publishedAt: '05-12-2025'
+summary: 'Figuring out what to build'
+---
+
+I love junior devs. There aren't many places—work, school, anywhere—where you'll find people that hungry to learn, that fired up by what they're building. I remember that feeling. Programming was new. It was exciting. I wasn't just taking what the machine gave me—I was telling it what to do. I felt like a technomage and sometimes it really did feel like magic. You barely understood what you typed, but it worked. The computer listened.
+
+Over time, as you move from junior to mid-level, that spark fades a bit. It stops feeling like magic and starts feeling like work. (There are still flashes though—little moments of awe.) But the ones who stick with it? The ones who get good? They never stop chasing the puzzle. They stay curious. They still get a kick out of solving hard problems.
+
+## But how do you get to mid level?
+
+![Man standing before a giant wall](https://res.cloudinary.com/dlk1wqemy/image/upload/v1746803294/mtg-wall_mt0nec.webp)
+
+Getting to mid-level is harder than people think. There's a brick wall at the end of your junior dev phase, and a lot of folks slam right into it. You've got the syntax down—data types, loops, functions—you understand how code works. But now what? Nobody told you what to *build*.
+
+I remember finishing *Learn Python the Hard Way* back in 2015. I closed the book, sat in my chair, and thought: What do I even make?
+
+I started digging around for inspiration and found a tutorial for a Twitter retweet bot. It looked cool and seemed easy enough. I followed along and ended up with a bot that retweeted any post with the words <a href="https://en.wikipedia.org/wiki/Dark_Souls">"dark souls."</a> (That account still exists, but I don't remember the login.)
+
+And that was it. That's where my Python journey ended. Not because I didn't enjoy it—I just didn't know where to go next. I had no plan. I wanted to learn how to program, and technically I did. But I never figured out what to *do* with it.
+
+## What not to do
+
+<a href="https://www.linkedin.com/posts/senzo-shinga-a970802a9_developers-who-are-just-starting-out-please-activity-7325838849354477569-hAVZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQeCvUBTXShfn6hBeow3Fl6GoBzVf4EyuM" alt="LinkedIn Post">![LinkedIn Post](https://res.cloudinary.com/dlk1wqemy/image/upload/v1746800778/linkedinpost_tmiwji.webp)</a>
+
+<br />
+
+That LinkedIn post kicked off this whole thing—and I agree with it.
+
+**Don't showcase tutorial projects. <small>Unless you're vastly improving on the original idea.</small>**
+
+Tutorial projects don't prove you know how to program—they prove you can follow instructions. At best. At worst, they show you know how to copy and paste.
+
+## Ok, so what do I build?
+
+When I was a TA—and later as a senior dev—I always told junior developers struggling with a concept to make it personal. Tutorials are generic by design. They use bland, abstract examples that aren't tied to anything you care about. But when you use something relevant to you, the concept clicks faster.
+
+Take JavaScript objects. A junior dev runs into trouble, Googles it, lands on MDN. What's the first example they see?
+
+```JavaScript
+const obj = {
+  foo: 1,
+  // You should not define such a method on your own object,
+  // but you may not be able to prevent it from happening if
+  // you are receiving the object from external input
+  propertyIsEnumerable() {
+    return false;
+  },
+};
+
+obj.propertyIsEnumerable("foo"); 
+// false; unexpected result
+Object.prototype.propertyIsEnumerable.call(obj, "foo"); 
+// true; expected result
+```
+
+<br />
+
+The MDN docs are an incredible resource—I've referenced them more times than I can count—but this example looks like it was written for a robot. And right out of the gate, it shows you something you shouldn't actually do. If you want to actually understand something, make it personal.
+
+So I'd ask, "What's something you like?"
+
+"Skateboarding."
+
+"Cool. Let's go with that."
+
+```JavaScript
+const skateboard = {
+    bearings: "Bones Reds",
+    deck: "Traffic 8\"",
+    griptape: "Mob Grip",
+    hardware: "Ace",
+    wheels: "Spitfire 53mm",
+    hasRazortail: function () {
+        return false;
+    }
+}
+
+console.log(skateboard.wheels);
+// "Spitfire 53mm"
+
+console.log(skateboard.hasRazortail());
+// false
+```
+<br />
+
+Adding your own personality helps it stick. So when you're trying to recall what an object is, you're not reaching for some bland MDN example—you're thinking about your skateboard, or whatever it is you care about.
+
+## You still haven't told me what to build.
+
+Exactly. That's the point—build something *you* care about. Solve a problem in your life, no matter how dumb or minor. Or build something completely ridiculous. It doesn't matter. Just make it yours.
+
+Once, during a company meeting, I came up with this silly idea: **Shopping Cart Roulette**. In the daydream version, a wheel spins—five slices give you a discount, but the sixth is a bullet. Land on that, and boom: the most expensive item in the store gets added to your cart. (In hindsight, the bullet *emptying* the cart would've been funnier.)
+
+So I started building. I broke down the logic right away: random number generator, the wheel was just flavor, and the result either applied a coupon or added a product. Easy. Within an hour, I had a working prototype.
+
+But that's when the real ideas started.  
+“What if the customer could *choose* what to add?”  
+“What if they could see everything they recently viewed?”
+
+And that's how I came up with the concept for the [Recently Viewed Addon](https://github.com/devin-hart/bigcommerce-recently-viewed).
+
+Nine times out of ten, you'll start with something small, and it'll snowball into something bigger than you imagined. Programming takes creativity. And the best way to break through a block is to just start building.
+
+If all else fails, rebuild a site you like—but strip out all the junk. Every site is bloated with nonsense. Cutting it down should be the easy part.
+
+Or run drills on the concepts that don't fully click. I used to just type out `for` loops over and over because I couldn't quite picture what was happening in my mind's eye. Sometimes you have to brute-force it until it inspiration comes.
+
+At the end of the day, the best way to learn is to build—and keep building.
+
