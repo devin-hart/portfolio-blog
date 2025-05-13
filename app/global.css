@@ -205,3 +205,11 @@ blockquote {
     margin-bottom: 0;
   }
 }
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 100%;
+  padding: 1rem;
+}
