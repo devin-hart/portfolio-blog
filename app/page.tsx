@@ -9,7 +9,7 @@ export default function Page() {
 
         <p >{`I have built for commerce. Watched the ebb and flow of traffic, the invisible hands clicking, scrolling, buying. The numbers rise and fall like tides. I have seen what makes a page fast and what makes it slow. What draws the eye and what sends it away. Accessibility, SEO, performance. Words that are more than words.`}</p>
 
-        <p >{`And then there is DevOps. The quiet work beneath the work. The scaffolding that holds the thing together. A pipeline is not just a pipeline. A server is not just a server. They are the hum of something greater. A system breathing, living.`}</p>
+        <p >{`And then there’s the unseen work. The tools behind the tools. Quiet things built to shape louder ones. A script here, a library there—nothing glamorous, but everything smoother because of them. The kind of work no one notices unless it’s missing. The kind that holds the rest together.`}</p>
 
         <p >{`I build. I refine. I deploy. There is always more to do. Always another problem to solve. I step forward into the unknown. And I build again.`}
       </p>
