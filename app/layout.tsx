@@ -13,32 +13,32 @@ import metaImage from './meta.jpg';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Devin Hart | Web Dev',
-    template: 'Devin Hart | Web Dev',
+    default: "Devin Hart | Web Dev",
+    template: "Devin Hart | Web Dev",
   },
-  description: 'Devin Hart Web Development Portfolio.',
+  description: "Devin Hart Web Development Portfolio.",
   openGraph: {
-    title: 'Devin Hart | Web Dev Portfolio',
-    description: 'Devin Hart Web Development Portfolio.',
+    title: "Devin Hart | Web Dev Portfolio",
+    description: "Devin Hart Web Development Portfolio.",
     url: baseUrl,
-    siteName: 'Devin Hart | Web Dev',
-    locale: 'en_US',
-    type: 'website',
-        images: [
+    siteName: "Devin Hart | Web Dev",
+    locale: "en_US",
+    type: "website",
+    images: [
       {
-        url: '/og/meta.jpg', // relative is fine with metadataBase
+        url: "/og/meta.jpg", // relative is fine with metadataBase
         width: 1200,
         height: 627,
-        alt: 'devinh.art',
+        alt: "devinh.art",
       },
     ],
   },
   icons: {
     icon: [
-        {
-            url: Favicon.src,
-            href: Favicon.src,
-        },
+      {
+        url: Favicon.src,
+        href: Favicon.src,
+      },
     ],
   },
   robots: {
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 
