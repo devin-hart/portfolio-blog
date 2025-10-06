@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import Favicon from './favicon.ico';
+import metaImage from './meta.jpg';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -23,6 +24,14 @@ export const metadata: Metadata = {
     siteName: 'Devin Hart | Web Dev',
     locale: 'en_US',
     type: 'website',
+        images: [
+      {
+        url: '/og/meta.jpg', // relative is fine with metadataBase
+        width: 1200,
+        height: 627,
+        alt: 'devinh.art',
+      },
+    ],
   },
   icons: {
     icon: [
