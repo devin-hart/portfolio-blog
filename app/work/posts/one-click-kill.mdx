@@ -1,0 +1,58 @@
+---
+title: 'OneClickKill.net'
+publishedAt: 'Project'
+summary: 'A passion project for one of my favorite games of all time'
+image: '/images/ock.webp'
+---
+
+[OneClickKill.net](https://www.oneclickkill.net/)
+
+<a href="/images/ock.webp">
+![OneClickKill.net site](/images/ock.webp)
+</a>
+
+## Project Summary
+
+OneClickKill.net is a full-stack Quake III Arena statistics and ladder platform built around a custom Node.js API and a React front-end. The system continuously polls live game servers via UDP to collect player, match, and map data, which is normalized and cached in a lightweight SQLite database for fast retrieval. The front-end—deployed on Vercel—renders this data in real time, with dynamic tables, player modals, and sparkline activity charts. Each player’s profile aggregates lifetime stats, weapon-specific performance, nemesis tracking, and 24-hour activity metrics. The app features modular ES6 components, live polling, state-based UI updates, and an adaptive ladder system that automatically ranks players by kills, deaths, and K/D ratio. It’s designed as a self-contained service that bridges classic Quake III Arena gameplay with modern, data-driven UX.
+
+## Project History
+
+I still remember sprinting off the bus after school just to get home and boot up Quake III Arena. My afternoons were spent glued to the screen, playing InstaGib matches on my clan’s server and fragging anyone who crossed my path — at least until my parents got home. It was pure chaos and pure fun. We had this small community of players who kept pushing each other to get better, and what really made it special was the ladder — watching your name climb that scoreboard on the clan’s website felt electric.
+
+OneClickKill.net is my way of bringing that back. It’s a love letter to those days — a passion project for the kid who couldn’t get enough of that game. There are still plenty of InstaGib servers out there, but none with the kind of ladder system or the little features I’ve built in here. This is for that middle-school version of me who still grins every time he hears the railgun fire.
+
+## ⚙️ OneClickKill.net — Feature Overview
+
+### Core Gameplay Integration
+- **Real-time Quake III Arena server tracking** — live map, player count, and status updated every few seconds.  
+- **Automated player ladder system** — ranks players by kills, deaths, and K/D ratio with automatic sorting.  
+- **Player lookup & history** — search any player by name to see lifetime stats and match history.  
+
+### Player Profiles
+- Dynamic **player modals** showing:
+  - Total kills, deaths, suicides, and K/D ratios.
+  - Weapon-specific performance (Railgun, Gauntlet).
+  - “Nemesis” tables listing humans and bots most killed or killed by.
+  - Sparkline charts visualizing **activity over the last 24 hours**.
+  - First seen / last seen timestamps and last used player models.
+
+### Live Dashboard
+- **Real-time polling (5s intervals)** for match summaries and ladder data.
+- Interactive **match and ladder tables** with clickable player names.
+- Automatic **data refresh indicators** and loading skeletons for smooth UX.
+- “ServerCard” display with live hostname, map, and player counts.
+
+### Search & Navigation
+- Integrated **player search bar** with instant lookup.
+- Color-coded **Quake name renderer** (`^` color codes rendered as inline styled text).
+
+### Front-End Architecture
+- Built with **React (ES6+)**, modular components (`Q3Table`, `PlayerModal`, `PlayerSearch`, etc.).
+- Designed for **Vercel deployment**, auto-updating via REST API endpoints.
+- Clean, dark-themed UI styled with lightweight custom CSS and grid layouts.
+
+<br />
+<a href="/images/ock-server.webp">
+<small>The server. (Yes, I bought a sticker for it.)</small>
+![OneClickKill.net site](/images/ock-server.webp)
+</a>
