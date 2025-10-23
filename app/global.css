@@ -33,9 +33,11 @@ html {
   min-width: 360px;
 }
 
-body {
-    overflow: hidden;
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
+
 
 .prose .anchor {
   @apply absolute invisible no-underline;

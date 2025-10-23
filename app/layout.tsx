@@ -9,6 +9,7 @@ import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import Favicon from './favicon.ico';
 import metaImage from './meta.jpg';
+import ScrollToTop from './components/ScrollTop';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -65,12 +66,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        "bg-cover bg-fixed bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dlk1wqemy/image/upload/v1741022028/bg-2_lpliqk.webp')] mt-4 mb-4",
+        "h-full bg-cover bg-fixed bg-center bg-no-repeat bg-[url('/images/bg.webp')]",
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 lg:mx-auto">
+      <body className="antialiased max-w-xl mx-4 lg:mx-auto mt-4 mb-4">
+        <ScrollToTop />
         <main className="flex-auto min-w-0 pt-6 flex flex-col px-2  text-[#DDDDDD] bg-[rgba(37,36,41,0.95)] pl-8 pr-8">
           <Navbar />
           {children}
