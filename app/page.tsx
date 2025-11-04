@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import d2 from '../public/images/d2.webp';
+
 export default function Page() {
   return (
     <section className="hs-screen fade-in">
@@ -6,7 +9,7 @@ export default function Page() {
       </h1>
       <p >Ideas turned into form, logic into movement.</p>
       <br />
-      <img src="/images/d2.webp" alt="me" />
+      <Image src={d2} alt="me" />
     </section>
   )
 }
