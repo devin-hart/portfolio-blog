@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { getBlogPosts } from 'app/work/utils'
+import { getPosts } from 'app/lib/posts'
 
 export function BlogPosts() {
-  const allBlogs = getBlogPosts()
+  const allBlogs = getPosts('app/work/posts') || []
 
   // Normalize "publishedAt" to group "Full Site Build (Hybrid)" under "Full Site Build"
   const grouped = allBlogs.reduce((acc, post) => {

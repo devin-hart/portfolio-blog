@@ -11,7 +11,13 @@ type Metadata = {
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
   let match = frontmatterRegex.exec(fileContent)
-  let frontMatterBlock = match![1]
+  
+  // If there's no frontmatter, return default metadata and the raw content
+  if (!match) {
+    return { metadata: { title: 'Untitled', publishedAt: '', summary: '' } as Metadata, content: fileContent };
+  }
+
+  let frontMatterBlock = match[1]
   let content = fileContent.replace(frontmatterRegex, '').trim()
   let frontMatterLines = frontMatterBlock.trim().split('\n')
   let metadata: Partial<Metadata> = {}
@@ -27,7 +33,12 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx')
+  try {
+    return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
+  } catch (error) {
+    console.warn(`[Warning] Directory not found: ${dir}. Returning no posts.`);
+    return [];
+  }
 }
 
 function readMDXFile(filePath) {
