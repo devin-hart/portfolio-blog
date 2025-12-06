@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getPosts } from 'app/lib/posts'
+import { getPosts } from 'app/work/posts'
 
 export function BlogPosts() {
   let allBlogs = getPosts('app/other/posts') || []
