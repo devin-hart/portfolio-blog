@@ -1,19 +1,19 @@
-import Link from 'next/link'
-import { getPosts } from 'app/work/posts'
+import Link from 'next/link';
+import { getPosts } from 'app/utils/posts'; // Updated import
 
 export function BlogPosts() {
-  const allBlogs = getPosts('app/work/posts') || []
+  const allBlogs = getPosts('app/work/posts') || [];
 
   // Normalize "publishedAt" to group "Full Site Build (Hybrid)" under "Full Site Build"
   const grouped = allBlogs.reduce((acc, post) => {
-    let section = post.metadata.publishedAt
+    let section = post.metadata.publishedAt;
     if (section === 'Full Site Build (Hybrid)') {
-      section = 'Full Site Build'
+      section = 'Full Site Build';
     }
-    if (!acc[section]) acc[section] = []
-    acc[section].push(post)
-    return acc
-  }, {})
+    if (!acc[section]) acc[section] = [];
+    acc[section].push(post);
+    return acc;
+  }, {});
 
   const sectionOrder = [
     'Addon',
@@ -21,7 +21,7 @@ export function BlogPosts() {
     'Full Site Build',
     'Project',
     'Tool'
-  ]
+  ];
 
   return (
     <div>
@@ -32,25 +32,24 @@ export function BlogPosts() {
             <div className="space-y-3">
               {grouped[section].map((post) => (
                 <Link
-                key={post.slug}
-                className="flex flex-col py-0"
-                href={`/work/${post.slug}`}
+                  key={post.slug}
+                  className="flex flex-col py-0"
+                  href={`/work/${post.slug}`}
                 >
-                <div className="w-full grid md:grid-cols-[125px_1fr] md:gap-x-4">
+                  <div className="w-full grid md:grid-cols-[125px_1fr] md:gap-x-4">
                     <p className="w-[150px] tabular-nums text-gray-400 !mb-0">
-                    {post.metadata.publishedAt}
+                      {post.metadata.publishedAt}
                     </p>
                     <p className="tracking-tight !mb-0">
-                    {post.metadata.title}
+                      {post.metadata.title}
                     </p>
-                </div>
-            </Link>
-
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
         )
       ))}
     </div>
-  )
+  );
 }
