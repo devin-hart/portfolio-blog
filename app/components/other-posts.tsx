@@ -1,29 +1,22 @@
-import Link from 'next/link'
-import { formatDate, getBlogPosts } from 'app/other/utils'
+import Link from 'next/link';
+import { getPosts } from 'app/utils/posts'; // Updated import
 
 export function BlogPosts() {
-  let allBlogs = getBlogPosts()
-  
+  let allBlogs = getPosts('app/other/posts') || [];
 
   return (
     <div>
       {allBlogs
         .sort((a, b) => {
-          const titleA = a.metadata.publishedAt.toLowerCase(); // Extract the title and convert to lowercase for case-insensitive comparison
-          const titleB = b.metadata.publishedAt.toLowerCase();
-          
-          if (titleA < titleB) {
+          if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
             return -1;
           }
-          if (titleA > titleB) {
-            return 1;
-          }
-          return 0; // titles must be equal
+          return 1;
         })
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1"
+            className="flex flex-col space-y-1 mb-4"
             href={`/other/${post.slug}`}
           >
             <div className="w-full grid md:grid-cols-[125px_1fr] md:gap-x-4 md:gap-y-4">
@@ -37,5 +30,5 @@ export function BlogPosts() {
           </Link>
         ))}
     </div>
-  )
+  );
 }
