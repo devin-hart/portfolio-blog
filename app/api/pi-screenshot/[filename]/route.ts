@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   request: Request,
-  { params }: { params: { filename: string } }
+  { params }: { params: Promise<{ filename: string }> }
 ) {
-  const { filename } = params;
+  const { filename } = await params;
   const PI_SCREENSHOT_URL = `https://rpi4.tailbfccfb.ts.net/data/screenshots/${filename}`;
 
   try {
